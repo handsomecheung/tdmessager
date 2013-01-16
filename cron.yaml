@@ -1,0 +1,6 @@
+cron:
+- description: every minutes
+  url: /tdmessager
+  schedule: every 1 minutes
+
+

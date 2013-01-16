@@ -1,0 +1,22 @@
+application: tdmessager
+version: beta-2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /_ah/xmpp/message/chat/
+  script: xmpp.py
+- url: /admin
+  script: admin.py
+  login: admin
+- url: /test
+  script: test.py
+  login: admin
+- url: /tdmessager
+  script: tdmessager.py
+- url: /.*
+  script: tdmessager.py
+  login: required
+
+inbound_services:
+- xmpp_message
